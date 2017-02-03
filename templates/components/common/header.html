@@ -1,27 +1,28 @@
-{{#if banners.top}}
-<div class="banners" data-banner-location="top">
-    <div class="banner">
-        {{{limit banners.top 1}}}
-    </div>
-</div>
-{{/if}}
 <header class="header" role="banner">
-    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-        <span class="mobileMenu-toggleIcon">Toggle menu</span>
-    </a>
 
-    {{> components/common/navigation}}
+    <div class="top-promo">
+        <a href="tel:+18004453429">
+            Order By Phone <span>1-800-445-3429</span>
+        </a>
+    </div>
 
     {{#if template_file '===' 'pages/home'}}
-        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
+        <h1 class="header-logo">
+            <a href="{{urls.home}}">
+                <img class="header-logo-image" src="{{cdn 'img/mobile-logo.jpg'}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}">
+            </a>
         </h1>
     {{else}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
+        <div class="header-logo">
+            <a href="{{urls.home}}">
+                <img class="header-logo-image" src="{{cdn 'img/mobile-logo.jpg'}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}">
+            </a>
         </div>
     {{/if}}
 
+    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+        <span class="mobileMenu-toggleIcon">Toggle menu</span><span class="menu-txt">MENU</span>
+    </a>
 
     <div class="navPages-container" id="menu" data-menu>
         {{> components/common/navigation-menu}}

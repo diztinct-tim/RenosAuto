@@ -1,5 +1,4 @@
-<div class="body">
-    {{#block "hero"}} {{/block}}
+<div class="body {{#if template_file '===' 'pages/home'}}home-page{{/if}} {{#if template_file '===' 'pages/product'}}product-page{{/if}} {{#if template_file '===' 'pages/category'}}category-page{{/if}} {{#if template_file '===' 'pages/page'}}info-page{{/if}} {{#if template_file '===' 'pages/contact-us'}}info-page contact-us{{/if}} {{#if template_file '===' 'pages/cart'}}cart-page{{/if}}">
     <div class="container">
         {{#block "page"}} {{/block}}
     </div>
